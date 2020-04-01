@@ -23,14 +23,12 @@ class Waiter
      Meal.all.select { |meal| meal.waiter == self }
   end
 
-
   def best_tipper
     meal_h_tip = meals.max do |meal1,meal2|
       meal1.tip <=> meal2.tip
      end
    meal_h_tip.customer
   end
-
 
 end
   #binding.pry
